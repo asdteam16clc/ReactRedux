@@ -1,9 +1,15 @@
-import { INCREMENT, DECREMENT } from '../constants'
+import { INCREMENT, DECREMENT, SHOWLIST } from '../constants'
 
 const initialState = {
   value: 0,
   action: null,
-  from: null
+  from: null,
+  option: {
+    userId: 0,
+    id: 0,
+    title: "",
+    body: ""
+  }
 }
 
 export const counter = (state = initialState, action) => {
@@ -23,6 +29,13 @@ export const counter = (state = initialState, action) => {
         action: 'decrement',
         from: action.from
       }
+
+    case SHOWLIST: {
+      return {
+        ...state,
+        option: action.DATA
+      }
+    }
 
     default:
       return state

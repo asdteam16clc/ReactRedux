@@ -1,26 +1,13 @@
 import React, { Component } from "react"
 import { Grid, Button, Typography } from "@material-ui/core"
 import { connect } from "react-redux";
+import Todo from "../components/TODO"
 
 class App extends Component {
 
   render() {
     return (
-      <Grid >
-        <Grid >
-          <Typography variant="h2" component="h1">
-            0
-        </Typography>
-        </Grid>
-        <Grid >
-          <Button variant="contained" color="primary">
-            Increase
-        </Button>
-          <Button variant="contained" color="primary">
-            Decrease
-        </Button>
-        </Grid>
-      </Grid>
+      <Todo></Todo>
     )
   }
 }

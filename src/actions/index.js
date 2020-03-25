@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../constants'
+import { INCREMENT, DECREMENT, SHOWLIST } from '../constants'
 
 export const increment = (isServer) => {
   return dispatch => {
@@ -15,5 +15,13 @@ export const decrement = (isServer) => {
       type: DECREMENT,
       from: isServer ? 'server' : 'client'
     })
+  }
+
+
+}
+export const showlist = (data) => {
+  return {
+    type: SHOWLIST,
+    DATA: data
   }
 }
